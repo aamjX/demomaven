@@ -31,4 +31,8 @@ public class App
     public static int sumaNumeros(int a , int b){
     	return a + b;
     }
+    
+    public int dameUnValor(){
+    	return 10;
+    }
 }
