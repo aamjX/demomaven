@@ -1,5 +1,9 @@
 package com.egc.demoMVN;
 
+import org.jgrapht.UndirectedGraph;
+import org.jgrapht.graph.DefaultEdge;
+import org.jgrapht.graph.SimpleGraph;
+
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -42,5 +46,28 @@ public class AppTest
     
     public void testSuma(){
     	assertEquals(10, App.sumaNumeros(5, 5));
+    }
+    
+    public void testJgrapht(){
+    	UndirectedGraph<String, DefaultEdge> g =
+                new SimpleGraph<String, DefaultEdge>(DefaultEdge.class);
+
+            String v1 = "v1";
+            String v2 = "v2";
+            String v3 = "v3";
+            String v4 = "v4";
+
+            // add the vertices
+            g.addVertex(v1);
+            g.addVertex(v2);
+            g.addVertex(v3);
+            g.addVertex(v4);
+
+            // add edges to create a circuit
+            g.addEdge(v1, v2);
+            g.addEdge(v2, v3);
+            g.addEdge(v3, v4);
+            g.addEdge(v4, v1);
+            assertTrue(g!=null);
     }
 }

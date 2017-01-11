@@ -1,5 +1,5 @@
 package com.egc.demoMVN;
-
+import com.google.gson.Gson;
 /**
  * Hello world!
  *
@@ -16,6 +16,11 @@ public class App
     	System.out.println( "Hello World!" );
         System.out.println(imprimeCadena("Mi nombre es Antonio Angel"));
         System.out.println(suma);
+        
+        System.out.println("----------------");
+        Gson gson = new Gson();
+        System.out.println("Probando gson");
+        System.out.println("-----------------");
         
     }
     
