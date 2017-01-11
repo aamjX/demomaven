@@ -1,4 +1,5 @@
 package com.egc.demoMVN;
+import org.apache.commons.math3.ode.MainStateJacobianProvider;
 
 import org.jgrapht.UndirectedGraph;
 import org.jgrapht.graph.DefaultEdge;
@@ -69,6 +70,10 @@ public class AppTest
             g.addEdge(v3, v4);
             g.addEdge(v4, v1);
             assertTrue(g!=null);
+    }
+    
+    public void testMath(){
+    	MainStateJacobianProvider r = null;
     }
     
 }
